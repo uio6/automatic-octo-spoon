@@ -1,0 +1,35 @@
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class domo {
+    public static void main(String[] args) throws IOException {
+        int s;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("请输入你的操作：");
+        System.out.println("1.查询所有员工");
+        System.out.println("2.根据id查询员工");
+        System.out.println("3.新增员工信息");
+        System.out.println("4.根据id修改员工信息");
+        System.out.println("5.根据id删除员工信息");
+        System.out.println("6.根据姓名模糊查询");
+        s=sc.nextInt();
+        select dd=new select();
+        switch (s){
+            case 1:dd.select_1();
+                break;
+            case 2:dd.select_2();
+                break;
+            case 3:dd.select_3();
+                break;
+            case 4:dd.select_4();
+                break;
+            case 5:dd.del();
+                break;
+            case 6:dd.selectObscureName();
+                break;
+            default:
+                System.out.println("不存在的选项");
+        }
+    }
+}
